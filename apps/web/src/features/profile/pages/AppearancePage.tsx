@@ -35,6 +35,7 @@ const STYLES: { value: Appearance['style']; label: string; description: string }
 
 // each tile draws its sample in its own font: `data-font` sets `--font-ui` there (index.css)
 const FONT_OPTIONS: { value: Appearance['font']; label: string }[] = [
+  { value: 'outfit', label: 'Outfit' },
   { value: 'noto-sans', label: 'Noto Sans' },
   { value: 'geist', label: 'Geist' },
   { value: 'inter', label: 'Inter' },

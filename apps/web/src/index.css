@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/noto-sans";
+@import "@fontsource-variable/outfit";
 /* KaTeX draws a Math code block. The rules stay in this file so production CSP (style-src 'self') keeps them. */
 @import "katex/dist/katex.min.css";
 /* Account settings → Appearance → Font. Browsers download a face only when text uses it. */
@@ -88,7 +89,8 @@
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.659 0.216 358.989);
+    /* DAMSYN green #2D5016; white text on it is 9.3:1 */
+    --primary: oklch(0.391 0.095 135.3);
     --primary-foreground: oklch(1 0 0);
     --secondary: oklch(0.967 0.001 286.375);
     --secondary-foreground: oklch(0.21 0.006 285.885);
@@ -99,22 +101,23 @@
     --destructive: oklch(0.577 0.245 27.325);
     --border: oklch(0.922 0 0);
     --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
+    --ring: oklch(0.540 0.133 135.1);
     --chart-1: oklch(0.809 0.105 251.813);
     --chart-2: oklch(0.623 0.214 259.815);
     --chart-3: oklch(0.546 0.245 262.881);
     --chart-4: oklch(0.488 0.243 264.376);
     --chart-5: oklch(0.424 0.199 265.638);
     --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
+    /* DAMSYN cream #F5F0EB */
+    --sidebar: oklch(0.958 0.009 67.7);
     --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.659 0.216 358.989);
+    --sidebar-primary: oklch(0.391 0.095 135.3);
     --sidebar-primary-foreground: oklch(1 0 0);
     /* the selected row in a side list: the sidebar colour, a bit darker (lighter in dark mode) */
     --sidebar-accent: color-mix(in oklch, var(--sidebar), black 6%);
     --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
+    --sidebar-border: oklch(0.9 0.012 67.7);
+    --sidebar-ring: oklch(0.540 0.133 135.1);
     /* Coolify chrome: a faint neutral right edge in light mode, no brand wash */
     --sidebar-edge: rgb(0 0 0 / 6%);
     --sidebar-wash: transparent;
@@ -133,7 +136,8 @@
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.205 0 0);
     --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.659 0.216 358.989);
+    /* a lighter DAMSYN green (#4A7F26) so it reads on black; white text on it is 4.8:1 */
+    --primary: oklch(0.540 0.133 135.1);
     --primary-foreground: oklch(1 0 0);
     --secondary: oklch(0.274 0.006 286.033);
     --secondary-foreground: oklch(0.985 0 0);
@@ -144,35 +148,38 @@
     --destructive: oklch(0.704 0.191 22.216);
     --border: oklch(1 0 0 / 10%);
     --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
+    --ring: oklch(0.540 0.133 135.1);
     --chart-1: oklch(0.809 0.105 251.813);
     --chart-2: oklch(0.623 0.214 259.815);
     --chart-3: oklch(0.546 0.245 262.881);
     --chart-4: oklch(0.488 0.243 264.376);
     --chart-5: oklch(0.424 0.199 265.638);
-    /* Coolify's dark sidebar is brand-black (#120e1a); Orbit's brand is pink, so pink-black */
-    --sidebar: oklch(0.17 0.018 359);
+    /* DAMSYN: near-black with a faint green cast */
+    --sidebar: oklch(0.17 0.012 135);
     --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.659 0.216 358.989);
+    --sidebar-primary: oklch(0.540 0.133 135.1);
     --sidebar-primary-foreground: oklch(1 0 0);
     --sidebar-accent: color-mix(in oklch, var(--sidebar), white 9%);
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
-    /* the pink counterparts of Coolify's lavender (#a391ff, #b9adff) and its tinted sidebar menus */
-    --sidebar-tint: oklch(0.74 0.15 359);
-    --sidebar-tint-foreground: oklch(0.82 0.09 359);
-    --sidebar-edge: oklch(0.74 0.15 359 / 10%);
-    --sidebar-wash: oklch(0.659 0.216 358.989 / 9%);
-    --sidebar-nav: oklch(0.8 0.02 359);
+    --sidebar-ring: oklch(0.540 0.133 135.1);
+    /* DAMSYN greens for the tinted sidebar menus (#8DBA5E, #A8CF7A) */
+    --sidebar-tint: oklch(0.736 0.131 130.5);
+    --sidebar-tint-foreground: oklch(0.807 0.12 128.9);
+    --sidebar-edge: oklch(0.736 0.131 130.5 / 10%);
+    --sidebar-wash: oklch(0.540 0.133 135.1 / 9%);
+    --sidebar-nav: oklch(0.8 0.015 135);
     --sidebar-nav-active: oklch(0.9612 0 0);
-    --sidebar-nav-muted: oklch(0.58 0.04 359);
+    --sidebar-nav-muted: oklch(0.58 0.03 135);
     --sidebar-popover: color-mix(in oklab, var(--primary) 10%, oklch(0.2002 0 0));
 }
 
 /* Account settings → Appearance → Font (lib/theme.tsx puts [data-font] on <html>; the font tiles set it too) */
 :root {
-    --font-ui: 'Noto Sans Variable', sans-serif;
+    --font-ui: 'Outfit Variable', sans-serif;
+}
+[data-font='outfit'] {
+    --font-ui: 'Outfit Variable', sans-serif;
 }
 [data-font='noto-sans'] {
     --font-ui: 'Noto Sans Variable', sans-serif;
@@ -379,7 +386,7 @@
     --card-foreground: oklch(0.145 0 0);
     --popover: oklch(1 0 0);
     --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.659 0.216 358.989);
+    --primary: oklch(0.391 0.095 135.3);
     --secondary: oklch(0.967 0.001 286.375);
     --secondary-foreground: oklch(0.21 0.006 285.885);
     --muted: oklch(0.97 0 0);

@@ -21,7 +21,7 @@ import {
 } from '@/lib/customTheme'
 
 /** The colours the fields start from when the user edits the Orbit default. */
-const CUSTOM_BASE: CustomTheme = { sidebar: '#1f1f23', selected: '#34343b', accent: '#f2458f', chat: '#26262b' }
+const CUSTOM_BASE: CustomTheme = { sidebar: '#1f1f23', selected: '#34343b', accent: '#4A7F26', chat: '#26262b' }
 
 const COLOR_FIELDS: readonly { key: keyof CustomTheme; label: string; hint: string }[] = [
   { key: 'sidebar', label: 'Sidebar', hint: 'The app sidebar' },
@@ -191,8 +191,8 @@ function CustomThemeForm({ value, onSave }: { value: CustomTheme | null; onSave:
  * it replaces the `var(--…)` colours on the page.
  */
 const ORBIT_COLORS: Record<Theme, CustomTheme & { text: string }> = {
-  light: { sidebar: 'oklch(0.985 0 0)', selected: 'oklch(0.97 0 0)', accent: 'oklch(0.659 0.216 358.989)', chat: 'oklch(1 0 0)', text: 'oklch(0.145 0 0)' },
-  dark: { sidebar: 'oklch(0.17 0.018 359)', selected: 'oklch(0.269 0 0)', accent: 'oklch(0.659 0.216 358.989)', chat: 'oklch(0.145 0 0)', text: 'oklch(0.985 0 0)' },
+  light: { sidebar: 'oklch(0.958 0.009 67.7)', selected: 'oklch(0.97 0 0)', accent: 'oklch(0.391 0.095 135.3)', chat: 'oklch(1 0 0)', text: 'oklch(0.145 0 0)' },
+  dark: { sidebar: 'oklch(0.17 0.012 135)', selected: 'oklch(0.269 0 0)', accent: 'oklch(0.540 0.133 135.1)', chat: 'oklch(0.145 0 0)', text: 'oklch(0.985 0 0)' },
 }
 
 /** Light or Dark as chosen in Appearance (System follows the device), whatever custom theme is on. */

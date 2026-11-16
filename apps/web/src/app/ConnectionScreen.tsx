@@ -1,5 +1,6 @@
 import { OrbitUnavailable } from '@/components/common/OrbitUnavailable'
 import { retryConnection, useConnection } from '@/lib/connection'
+import { APP_NAME } from '@/lib/brand'
 
 /**
  * "Orbit is unavailable" over the whole app when the connection is still down after a minute. The app stays mounted
@@ -8,5 +9,5 @@ import { retryConnection, useConnection } from '@/lib/connection'
 export function ConnectionScreen() {
   const { phase } = useConnection()
   if (phase !== 'failed') return null
-  return <OrbitUnavailable overlay detail="Orbit could not reconnect. It keeps trying, and you can retry now." onRetry={retryConnection} />
+  return <OrbitUnavailable overlay detail={`${APP_NAME} could not reconnect. It keeps trying, and you can retry now.`} onRetry={retryConnection} />
 }

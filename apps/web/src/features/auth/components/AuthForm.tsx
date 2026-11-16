@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input'
 import { PasswordInput } from '@/components/ui/password-input'
 import { Label } from '@/components/ui/label'
 import { cn } from 'cn'
+import { APP_NAME } from '@/lib/brand'
 
 export function AuthInput({ label, value, onChange, type = 'text', required = true }: { label: string; value: string; onChange?: (value: string) => void; type?: string; required?: boolean }) {
   const id = useId()
@@ -23,8 +24,8 @@ export function AuthCard({ children, className }: { children: React.ReactNode; c
 }
 
 export function AuthBrand() {
-  // 22px keeps the 11-unit pixel logo on whole device pixels.
-  return <span className="flex items-center gap-2 text-[0.8125rem] font-bold tracking-[0.08em] text-primary uppercase"><img src="/logo.svg" alt="" className="size-[22px]" />Orbit</span>
+  // the DAMSYN mark at 22px
+  return <span className="flex items-center gap-2 text-[0.8125rem] font-bold tracking-[0.08em] text-primary uppercase"><img src="/logo.svg" alt="" className="size-[22px]" />{APP_NAME}</span>
 }
 
 /** Header, an inset panel with the fields and actions, and an optional footer row (Coolify's sign-in layout). */

@@ -56,7 +56,7 @@ export type CustomThemeChoice = CustomTheme | { apps: AppLooks } | null
 
 /** A theme's preset name, `Your colors` when it is not a preset, or `Orbit` for the Light, System or Dark theme. */
 export function themeName(theme: CustomTheme | null): string {
-  if (!theme) return 'Orbit'
+  if (!theme) return 'DAMSYN'
   const code = serializeCustomTheme(theme)
   return CUSTOM_THEME_PRESETS.find((preset) => serializeCustomTheme(preset.theme) === code)?.name ?? 'Your colors'
 }

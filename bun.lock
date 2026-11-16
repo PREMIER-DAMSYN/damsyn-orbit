@@ -69,6 +69,7 @@
         "@fontsource-variable/inter": "^5.3.0",
         "@fontsource-variable/literata": "^5.3.0",
         "@fontsource-variable/noto-sans": "^5.3.0",
+        "@fontsource-variable/outfit": "^5.3.0",
         "@hey-api/client-fetch": "^0.13.1",
         "@orbit/api": "workspace:*",
         "@orbit/database": "workspace:*",
@@ -444,6 +445,8 @@
     "@fontsource-variable/literata": ["@fontsource-variable/literata@5.3.0", "", {}, "sha512-1Jw7xvOcoGyB83lxB2nG4bfNbqtX2/TTbdh9sHAOmU064SvmSdulDtA5RBu5JYWf64fdaKX7xU+z3GO1T2bCHA=="],
 
     "@fontsource-variable/noto-sans": ["@fontsource-variable/noto-sans@5.3.0", "", {}, "sha512-e3ZuxzY9AL2psXPZlhwhnYrHUHv6PMoyK9MQ7croF0CUgURLqu9EMjW7q2FgVLwij1tjLsIHQrnwQ8aUcg4BiA=="],
+
+    "@fontsource-variable/outfit": ["@fontsource-variable/outfit@5.3.0", "", {}, "sha512-fPb5XnYK0k7SbR++HEmm4+ZqDszmLKQ+sPRUr8oQ/KNC0vy6r6hazJFe8iYozv4cqlHbvJ/JECkJWrfDodUMVQ=="],
 
     "@handlewithcare/prosemirror-inputrules": ["@handlewithcare/prosemirror-inputrules@0.1.4", "", { "dependencies": { "prosemirror-history": "^1.4.1", "prosemirror-transform": "^1.0.0" }, "peerDependencies": { "prosemirror-model": "^1.0.0", "prosemirror-state": "^1.0.0", "prosemirror-view": "^1.0.0" } }, "sha512-GMqlBeG2MKM+tXEFd2N+wIv5z4VvJTg8JtfJUrdjvFq2W6v+AW8oTgiWyFw8L3iEQwvtQcVJxU873iB0LXUNNw=="],
 

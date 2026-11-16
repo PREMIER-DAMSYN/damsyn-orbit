@@ -5,6 +5,7 @@ import { useConfirmEmailChange } from '@/features/auth/api'
 import { AuthCard } from '@/features/auth/components/AuthForm'
 import { AuthMessage } from '@/features/auth/components/AuthMessage'
 import { useConsumedToken } from '@/features/auth/useConsumedToken'
+import { APP_NAME } from '@/lib/brand'
 
 const ERROR_TITLES: Record<string, string> = {
   invalid_email_change_token: 'This link does not work',
@@ -33,7 +34,7 @@ export function ConfirmEmailPage() {
       <AuthCard>
         <h1 className="mb-1 text-xl font-semibold">Your email is changed</h1>
         <p className="text-[0.8125rem] leading-[1.6] text-muted-foreground">You now sign in with {confirm.data}. Your other devices are signed out.</p>
-        <p className="mt-4 text-[0.8125rem]"><Link to="/" className="font-medium text-foreground">Continue to Orbit</Link></p>
+        <p className="mt-4 text-[0.8125rem]"><Link to="/" className="font-medium text-foreground">Continue to {APP_NAME}</Link></p>
       </AuthCard>
     )
   }

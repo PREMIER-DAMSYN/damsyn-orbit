@@ -4,13 +4,14 @@ import { useCompleteSetup } from '@/features/auth/api'
 import { AuthForm, AuthInput } from '@/features/auth/components/AuthForm'
 import { AuthMessage } from '@/features/auth/components/AuthMessage'
 import { useConsumedToken } from '@/features/auth/useConsumedToken'
+import { APP_NAME } from '@/lib/brand'
 
 export function SetupPage() {
   const navigate = useNavigate()
   const setup = useCompleteSetup()
   const token = useConsumedToken()
   const [form, setForm] = useState({ display_name: '', email: '', password: '' })
-  if (!token) return <AuthMessage title="Set up Orbit" detail="Open the one-time setup link printed by the server. The account you create there becomes the root user of this instance." />
+  if (!token) return <AuthMessage title={`Set up ${APP_NAME}`} detail="Open the one-time setup link printed by the server. The account you create there becomes the root user of this instance." />
   return (
     <AuthForm title="Create the root account" error={setup.error} pending={setup.isPending} submitLabel="Create root account" onSubmit={async () => {
       await setup.mutateAsync({ token, ...form })

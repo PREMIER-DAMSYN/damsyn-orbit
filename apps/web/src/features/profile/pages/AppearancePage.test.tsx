@@ -12,15 +12,15 @@ afterEach(() => {
 
 test('a font tile draws its sample in that font and picking it changes the font of the whole page', () => {
   const view = render(<ThemeProvider><AppearancePage /></ThemeProvider>)
-  const notoSans = view.getByRole('button', { name: 'Noto Sans' })
+  const outfit = view.getByRole('button', { name: 'Outfit' })
   const literata = view.getByRole('button', { name: 'Literata' })
-  expect(notoSans.getAttribute('aria-pressed')).toBe('true')
+  expect(outfit.getAttribute('aria-pressed')).toBe('true')
   expect(literata.querySelector('[data-font="literata"]')?.textContent).toBe('Ag')
 
   fireEvent.click(literata)
 
   expect(literata.getAttribute('aria-pressed')).toBe('true')
-  expect(notoSans.getAttribute('aria-pressed')).toBe('false')
+  expect(outfit.getAttribute('aria-pressed')).toBe('false')
   expect(document.documentElement.dataset.font).toBe('literata')
   expect(localStorage.getItem('orbit:font')).toBe('literata')
 })

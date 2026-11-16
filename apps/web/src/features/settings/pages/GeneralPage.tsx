@@ -11,6 +11,7 @@ import { SettingsCard } from '@/components/common/SettingsCard'
 import { FieldGrid } from '@/features/settings/components/SettingsParts'
 import { WorkspaceLeave } from '@/features/settings/components/WorkspaceLeave'
 import { useSlowPending } from '@/lib/useDebouncedValue'
+import { APP_NAME } from '@/lib/brand'
 
 export function GeneralPage() {
   const { workspace } = useWorkspace()
@@ -44,7 +45,7 @@ export function GeneralPage() {
       </SettingsCard> : null}
 
       <WorkspaceLeave key={workspace.id} />
-      {version ? <p className="text-center text-xs text-muted-foreground tabular-nums">Orbit v{version}</p> : null}
+      {version ? <p className="text-center text-xs text-muted-foreground tabular-nums">{APP_NAME} · Orbit v{version}</p> : null}
       {dirty ? (
         <UnsavedBar
           onReset={() => { if (renameWorkspace.isPending) return; setNameDraft(null); renameWorkspace.reset() }}
