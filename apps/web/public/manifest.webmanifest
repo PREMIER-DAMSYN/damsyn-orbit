@@ -1,11 +1,11 @@
 {
-  "name": "Orbit",
-  "short_name": "Orbit",
+  "name": "DAMSYN Space",
+  "short_name": "DAMSYN",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
-  "background_color": "#160c0f",
-  "theme_color": "#160c0f",
+  "background_color": "#121610",
+  "theme_color": "#121610",
   "icons": [
     {
       "src": "/favicon.svg",

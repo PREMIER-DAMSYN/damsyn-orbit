@@ -5,6 +5,7 @@ import { AuthCard, AuthForm, AuthInput } from '@/features/auth/components/AuthFo
 import { AuthMessage } from '@/features/auth/components/AuthMessage'
 import { ProviderButtons } from '@/features/auth/components/ProviderButtons'
 import { useConsumedToken } from '@/features/auth/useConsumedToken'
+import { APP_NAME } from '@/lib/brand'
 
 /** Open registration: first the email (a link goes there), then from that link the name and password. */
 export function RegisterPage() {
@@ -20,7 +21,7 @@ function RequestRegistration() {
   // A provider can create the account without a mail server, so email sign-up may be off while providers are on.
   const providers = options.data?.provider_registration_open ? options.data.providers : []
   if (options.data && !options.data.registration_open && providers.length === 0) {
-    return <AuthMessage title="Registration is closed" detail="This Orbit does not accept new accounts. Ask an administrator for an invitation." />
+    return <AuthMessage title="Registration is closed" detail={`${APP_NAME} does not accept new accounts. Ask an administrator for an invitation.`} />
   }
   if (options.data && !options.data.registration_open) {
     return (

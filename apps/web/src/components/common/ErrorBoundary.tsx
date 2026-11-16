@@ -2,6 +2,7 @@ import { Component, type ReactNode } from 'react'
 import { Danger } from 'reicon-react'
 import { Button } from '@/components/ui/button'
 import { EmptyState } from './EmptyState'
+import { APP_NAME } from '@/lib/brand'
 
 interface ErrorBoundaryProps {
   children: ReactNode
@@ -28,7 +29,7 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, { error: unknow
         <EmptyState
           icon={Danger}
           title="Something went wrong"
-          description="This part of Orbit stopped working. Reload the page to try again."
+          description={`This part of ${APP_NAME} stopped working. Reload the page to try again.`}
           action={<Button onClick={() => window.location.reload()}>Reload</Button>}
         />
       </div>

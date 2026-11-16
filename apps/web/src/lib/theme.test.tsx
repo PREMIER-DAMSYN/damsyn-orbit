@@ -29,9 +29,9 @@ afterEach(() => {
 
 test('a choice is saved and applied to the page', () => {
   const view = render(<ThemeProvider><Controls /></ThemeProvider>)
-  expect(view.getByTestId('appearance').textContent).toBe('{"theme":"dark","style":"3d","navStyle":"default","font":"noto-sans","textSize":"default"}')
+  expect(view.getByTestId('appearance').textContent).toBe('{"theme":"dark","style":"3d","navStyle":"default","font":"outfit","textSize":"default"}')
   expect(document.documentElement.classList.contains('dark')).toBe(true)
-  expect(document.documentElement.dataset.font).toBe('noto-sans')
+  expect(document.documentElement.dataset.font).toBe('outfit')
   expect(document.documentElement.dataset.textSize).toBe('default')
 
   fireEvent.click(view.getByRole('button', { name: 'change' }))
@@ -54,8 +54,8 @@ test('a stored font and text size are read back, and unknown ones fall back to t
   localStorage.setItem('orbit:font', 'comic-sans')
   localStorage.setItem('orbit:text-size', 'huge')
   const fallback = render(<ThemeProvider><Controls /></ThemeProvider>)
-  expect(JSON.parse(fallback.getByTestId('appearance').textContent ?? '')).toMatchObject({ font: 'noto-sans', textSize: 'default' })
-  expect(document.documentElement.dataset.font).toBe('noto-sans')
+  expect(JSON.parse(fallback.getByTestId('appearance').textContent ?? '')).toMatchObject({ font: 'outfit', textSize: 'default' })
+  expect(document.documentElement.dataset.font).toBe('outfit')
 })
 
 test('the system theme follows the operating system', () => {

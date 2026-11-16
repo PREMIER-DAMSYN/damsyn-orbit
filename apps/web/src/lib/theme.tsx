@@ -15,7 +15,7 @@ function storedAppearance(): Appearance {
     theme: theme === 'light' || theme === 'system' ? theme : 'dark',
     style: localStorage.getItem('orbit:style') === 'flat' ? 'flat' : '3d',
     navStyle: localStorage.getItem('orbit:nav-style') === 'floating' ? 'floating' : 'default',
-    font: storedChoice('orbit:font', FONTS, 'noto-sans'),
+    font: storedChoice('orbit:font', FONTS, 'outfit'),
     textSize: storedChoice('orbit:text-size', TEXT_SIZES, 'default'),
   }
 }

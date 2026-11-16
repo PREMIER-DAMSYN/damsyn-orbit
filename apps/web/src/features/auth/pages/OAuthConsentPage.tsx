@@ -13,6 +13,7 @@ import { createApiClient } from '@/api/client'
 import { oauthRequest, type OAuthConsent } from '@/features/auth/oauth'
 import { loginPath } from '@/features/auth/returnTo'
 import { LoadingText } from '@/components/ui/spinner'
+import { APP_NAME } from '@/lib/brand'
 
 // Anonymous consent sessions must not trigger the app-wide /login redirect.
 const consentClient = createApiClient()
@@ -90,7 +91,7 @@ export function OAuthConsentPage() {
   const complete = chosen.length > 0 && chosen.every(({ id }) => pickOf(id).all || (pickOf(id).selected.length > 0 && pickOf(id).selected.length <= 100))
   return <AuthCard><div className="grid gap-5">
     <AuthBrand />
-    <h1 className="text-xl font-semibold">Connect to Orbit</h1>
+    <h1 className="text-xl font-semibold">Connect to {APP_NAME}</h1>
     {user.isError || consent.isError || !/^[A-Za-z0-9_-]{43}$/.test(request) ? <p role="alert">This request is not available. Restart the connection from your MCP client.</p> : consent.data ? <>
       <p><strong>{consent.data.client_name}</strong> wants to connect to the workspaces and projects you select.</p>
       <p className="text-sm text-muted-foreground">Signed in as {user.data?.display_name}.</p>

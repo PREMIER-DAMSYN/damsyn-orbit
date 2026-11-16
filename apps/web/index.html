@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content" />
-    <meta name="theme-color" content="#160c0f" />
+    <meta name="theme-color" content="#121610" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Orbit" />
+    <meta name="apple-mobile-web-app-title" content="DAMSYN Space" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-    <title>Orbit</title>
+    <title>DAMSYN Space</title>
     <script>
       // iOS zooms into any field whose text is under 16px. `maximum-scale=1` stops that zoom, and iOS still lets people
       // pinch to zoom. Only on iOS: on Android it would block pinch zoom, and Android does not zoom into fields.
@@ -25,7 +25,7 @@
       root.classList.toggle('dark', theme === 'system' ? matchMedia('(prefers-color-scheme: dark)').matches : theme !== 'light')
       root.toggleAttribute('data-flat', localStorage.getItem('orbit:style') === 'flat')
       root.toggleAttribute('data-floating', localStorage.getItem('orbit:nav-style') === 'floating')
-      root.dataset.font = localStorage.getItem('orbit:font') || 'noto-sans'
+      root.dataset.font = localStorage.getItem('orbit:font') || 'outfit'
       root.dataset.textSize = localStorage.getItem('orbit:text-size') || 'default'
     </script>
   </head>
@@ -37,20 +37,20 @@
       <div role="status" aria-label="Loading" style="position: fixed; inset: 0; display: grid; place-items: center">
         <svg viewBox="0 0 11 11" shape-rendering="crispEdges" aria-hidden="true" width="66" height="66" opacity="0">
           <animate attributeName="opacity" from="0" to="1" begin="0.4s" dur="0.2s" fill="freeze" />
-          <path fill="#742f4d" d="M1 3h2v6H1zM3 1h6v2H3zM9 3h2v6H9zM3 9h6v2H3z" />
-          <path fill="#f2458f" d="M2 0h6v2H2z" opacity="0.3">
+          <path fill="#1E3810" d="M1 3h2v6H1zM3 1h6v2H3zM9 3h2v6H9zM3 9h6v2H3z" />
+          <path fill="#4A7F26" d="M2 0h6v2H2z" opacity="0.3">
             <animate attributeName="opacity" values="0.3;1;0.3;0.3" keyTimes="0;0.2;0.6;1" calcMode="spline"
               keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0 0 1 1" dur="1.6s" begin="0s" repeatCount="indefinite" />
           </path>
-          <path fill="#f2458f" d="M8 2h2v6H8z" opacity="0.3">
+          <path fill="#4A7F26" d="M8 2h2v6H8z" opacity="0.3">
             <animate attributeName="opacity" values="0.3;1;0.3;0.3" keyTimes="0;0.2;0.6;1" calcMode="spline"
               keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0 0 1 1" dur="1.6s" begin="0.4s" repeatCount="indefinite" />
           </path>
-          <path fill="#f2458f" d="M2 8h6v2H2z" opacity="0.3">
+          <path fill="#4A7F26" d="M2 8h6v2H2z" opacity="0.3">
             <animate attributeName="opacity" values="0.3;1;0.3;0.3" keyTimes="0;0.2;0.6;1" calcMode="spline"
               keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0 0 1 1" dur="1.6s" begin="0.8s" repeatCount="indefinite" />
           </path>
-          <path fill="#f2458f" d="M0 2h2v6H0z" opacity="0.3">
+          <path fill="#4A7F26" d="M0 2h2v6H0z" opacity="0.3">
             <animate attributeName="opacity" values="0.3;1;0.3;0.3" keyTimes="0;0.2;0.6;1" calcMode="spline"
               keySplines="0.42 0 0.58 1;0.42 0 0.58 1;0 0 1 1" dur="1.6s" begin="1.2s" repeatCount="indefinite" />
           </path>

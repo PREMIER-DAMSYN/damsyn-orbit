@@ -3,7 +3,7 @@ import { createContext, useContext } from 'react'
 export type Theme = 'dark' | 'light'
 
 /** Account settings → Appearance → Font. `noto-sans` is the default; `system` is the operating system's UI font. */
-export const FONTS = ['noto-sans', 'geist', 'inter', 'ibm-plex-sans', 'system', 'literata', 'mono'] as const
+export const FONTS = ['outfit', 'noto-sans', 'geist', 'inter', 'ibm-plex-sans', 'system', 'literata', 'mono'] as const
 
 /** Account settings → Appearance → Text size, smallest first. */
 export const TEXT_SIZES = ['small', 'compact', 'default', 'large', 'extra-large'] as const
